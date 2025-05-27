@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #E3F2FD;
+}
+
+.popup {
+    position: absolute;
+    left: 50%;
+    touch-action: 0;
+    width: 490px;
+    border-radius: 5px;
+    padding: 13px 17px 20px;
+    background: #fff;
+    border-top: 3px solid #EA4D67;
+    box-shadow: 0 10px 25px rgba(52, 87, 220, 0.1);
+    display: flex;
+    transform: translateX(-50%);
+    top: -25%;
+    visibility: hidden;
+    transition: all 0.25s ease;
+}
+
+.popup.show {
+    top: 0;
+    visibility:visible;
+}
+
+.popup.online {
+    border-color: #2ECC71;
+}
+
+.popup .title {
+    font-size: 1.2rem;
+}
+
+.popup .desc {
+    color: #474747;
+    margin: 3px 0 10px;
+    font-size: 1.04rem;
+}
+
+.popup .reconnect {
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 0.95rem;
+    padding: 9px 15px;
+    background: #5372F0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.popup .icon i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    color: #fff;
+    margin-right: 15px;
+    font-size: 1.2rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #EA4D67;
+}
+
+.popup.online .icon i {
+    background: #2ECC71;
+}
+
+.popup.online .reconnect {
+    background: #bfbfbf;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 550px){
+    .popup {
+        width: 100%;
+        padding: 10px 15px 17px;
+    }
+}
